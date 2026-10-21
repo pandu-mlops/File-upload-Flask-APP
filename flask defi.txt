@@ -1,0 +1,11 @@
+
+What is Flask?
+
+Flask is a lightweight web framework for Python that helps you create websites, web applications, and APIs.
+
+In simple words, Flask connects your Python code to a web browser. It receives requests from users, 
+processes them using Python, 
+and sends responses back to the browser.
+
+For example, your earlier HTML application allows a user to enter a message and click Submit. 
+Flask receives that message and displays it on the web page
