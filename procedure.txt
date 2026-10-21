@@ -1,0 +1,49 @@
+
+ **** flask application  to upload files in docker container folder*************
+
+   ****Build a Flask File Upload Application Using Docker*******
+
+Build a project in which a user uploads a file through a web page, 
+Flask receives the file, and the file is saved inside a directory in the Docker container.
+
+ create folder flask-app, with in this folder
+ 
+ create app.py file ( flask app )
+ create Dockerfile
+ create requirements.txt file
+ create template folder, with in this create index.html file
+
+==========================================
+ open/run docker desktop
+ open flask-app(working dir) at any terminal--preferbly vs code
+
+run following commands
+ 
+docker --version
+ls
+docker build -t pandumlops/fileupload:v1 .  == to get docker image with name pandumlops/fileupload and version=tag=v1
+
+docker images
+
+
+docker push pandumlops/fileupload:v1     == push image to docker hub
+
+docker run -it -p 5000:5000 pandumlops/fileupload:v1      =====run container with image from docker hub
+
+docker run -d -it --name file-upload -p 5000:5000 pandumlops/fileupload:v1    == name container and run in detach mode
+
+====================================================================================================
+
+PS C:\Users\abcde\OneDrive\Desktop\MLOPS-ASSIGNMENTS\flask-app> docker ps                                                                 
+CONTAINER ID   IMAGE                      COMMAND           CREATED          STATUS          PORTS                                         NAMES
+75d56589e645   pandumlops/fileupload:v1   "python app.py"   14 seconds ago   Up 11 seconds   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   file-upload
+PS C:\Users\abcde\OneDrive\Desktop\MLOPS-ASSIGNMENTS\flask-app> 
+
+=================================================================================================
+
+Running on http://127.0.0.1:5000  ===== test app
+
+
+
+https://chatgpt.com/share/6ad904c9-bc10-83ee-a60e-3680b4c6d38d  ==procedure link
+
